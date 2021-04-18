@@ -2,8 +2,6 @@ import Head from "next/head";
 
 import { Navbar } from "../components/Navbar";
 import { ScrollToTop } from "../components/ScrollToTop";
-import { Megamenu } from "../components/Megamenu";
-import { Searchbar } from "../components/Searchbar";
 
 export default function Home() {
   return (
@@ -14,8 +12,6 @@ export default function Home() {
       </Head>
       <Navbar />
       <ScrollToTop />
-      <Megamenu />
-      <Searchbar />
     </div>
   );
 }

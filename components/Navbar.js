@@ -1,11 +1,14 @@
+import Link from "next/link";
+import { useState } from "react";
+import { DarkModeToggle } from "../components/DarkModeToggle";
+
 export const Navbar = () => {
+  const [blogDropdownOpen, setblogDropdownOpen] = useState(false);
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-white py-4 lg:px-12 shadow border-solid border-t-2 border-blue-700">
+    <nav className="sticky inset-0 z-50 flex items-center justify-between flex-wrap bg-white py-4 lg:px-12 shadow border-solid border-t-2 border-blue-700">
       <div className="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
         <div className="flex items-center flex-shrink-0 text-gray-800 mr-16">
-          <span className="font-semibold text-xl tracking-tight">
-            My Navbar
-          </span>
+          <span className="font-semibold text-xl tracking-tight">Logo</span>
         </div>
         <div className="block lg:hidden ">
           <button
@@ -26,24 +29,87 @@ export const Navbar = () => {
 
       <div className="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
         <div className="text-md font-bold text-blue-700 lg:flex-grow">
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2"
-          >
-            Menu 1
-          </a>
-          <a
-            href="#responsive-header"
-            className=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2"
-          >
-            Menu 2
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2"
-          >
-            Menu 3
-          </a>
+          <Link href="/">
+            <p className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer">
+              Home
+            </p>
+          </Link>
+          <Link href="/about">
+            <p className=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer">
+              About
+            </p>
+          </Link>
+          <Link href="/contact">
+            <p className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer">
+              <span>Contact</span>
+            </p>
+          </Link>
+          <div className="relative inline">
+            <a
+              href="#"
+              onClick={() => setblogDropdownOpen((prev) => !prev)}
+              href="#responsive-header"
+            >
+              <p className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer">
+                <span>Blog</span>
+                <span class="ml-2 font-size inline-block">
+                  {" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-3 w-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </span>
+              </p>
+            </a>
+            <div
+              class={`${
+                blogDropdownOpen ? "" : "hidden"
+              } bg-white shadow-md rounded border border-gray-300 text-sm absolute top-auto left-0 min-w-full w-56 z-30 mt-1`}
+            >
+              <span class="absolute top-0 left-0 w-3 h-3 bg-white border transform rotate-45 -mt-1 ml-6"></span>
+              <div class="bg-white rounded w-full relative z-10 py-1">
+                <ul class="list-reset">
+                  <li class="relative">
+                    <Link
+                      href="/blog-1"
+                      class="px-4 py-2 flex w-full items-start hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100 cursor-pointer"
+                    >
+                      <div class="px-4 py-2 inline flex w-full items-start hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Blog 1</span>
+                      </div>
+                    </Link>
+                  </li>
+                  <li class="relative">
+                    <Link href="/blog-2">
+                      <div class="px-4 py-2 inline flex w-full items-start hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Blog 2</span>
+                      </div>
+                    </Link>
+                  </li>
+                  <li class="relative">
+                    <Link
+                      href="/blog-3"
+                      class="px-4 py-2 flex w-full items-start hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100 cursor-pointer"
+                    >
+                      <div class="px-4 py-2 inline flex w-full items-start hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Blog 3</span>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="relative mx-auto text-gray-600 lg:block hidden">
           <input
@@ -68,20 +134,21 @@ export const Navbar = () => {
             </svg>
           </button>
         </div>
+        <div className="ml-4 mr-4">
+          <DarkModeToggle />
+        </div>
         <div className="flex ">
-          <a
-            href="#"
-            className="block text-md px-4 py-2 rounded text-blue-700 ml-2 font-bold hover:text-white mt-4 hover:bg-blue-700 lg:mt-0"
-          >
-            Sign in
-          </a>
+          <Link href="/sign-in">
+            <p className="block text-md px-4 py-2 rounded text-blue-700 ml-2 font-bold hover:text-white mt-4 hover:bg-blue-700 lg:mt-0 cursor-pointer">
+              Sign in
+            </p>
+          </Link>
 
-          <a
-            href="#"
-            className=" block text-md px-4  ml-2 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 hover:bg-blue-700 lg:mt-0"
-          >
-            login
-          </a>
+          <Link href="/free-trial">
+            <p className=" block text-md px-4  ml-2 py-2 rounded text-white bg-blue-700 font-bold mt-4 hover:bg-blue-800 lg:mt-0 cursor-pointer">
+              Start Free Trial
+            </p>
+          </Link>
         </div>
       </div>
     </nav>
