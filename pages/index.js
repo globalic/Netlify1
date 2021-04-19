@@ -1,17 +1,34 @@
 import Head from "next/head";
 
+import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { ScrollToTop } from "../components/ScrollToTop";
 
+// Example Components
+import { ExampleCTAHeader } from "../components/examples/ExampleCTAHeader";
+import { ExampleFeaturedSection } from "../components/examples/ExampleFeaturedSection";
+import { ExampleFreeTrial } from "../components/examples/ExampleFreeTrial";
+import { createRef, useEffect, useRef } from "react";
+import { CookieBanner } from "../components/CookieBanner";
+
 export default function Home() {
   return (
-    <div>
+    <div id="top">
       <Head>
-        <title>My Website</title>
+        <title>My Website | Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <CookieBanner />
       <Navbar />
+
+      {/* Examples */}
+      <ExampleCTAHeader />
+      <ExampleFeaturedSection />
+      <ExampleFeaturedSection />
+      <ExampleFreeTrial />
+
       <ScrollToTop />
+      <Footer />
     </div>
   );
 }
