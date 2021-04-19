@@ -1,16 +1,24 @@
 import { useRef, useState } from "react";
-import "../styles/cookiebanner.module.css";
+import styles from "../styles/cookiebanner.module.css";
 
 export const CookieBanner = () => {
+  // Using a ref to the modal here because
+  // you have to use [yourmodal].open() in
+  // order to get the backdrop to display
+  // correctly
   const modalRef = useRef();
+
+  // Opening and closing the initial cookies display
   const [open, setOpen] = useState(true);
+
   const [settingsOpen, setSettingsOpen] = useState(false);
+
   const acceptCookiesHandler = () => {
-    // accept cookies
+    // place code accept cookies
     setOpen(false);
   };
   const saveSettingsHandler = () => {
-    // save settings
+    // place code to save settings
     setOpen(false);
   };
 
@@ -59,7 +67,7 @@ export const CookieBanner = () => {
       <dialog
         ref={modalRef}
         open={settingsOpen}
-        id="cookiesModal"
+        id={styles.cookiesModal}
         className="h-auto w-11/12 md:w-1/2 bg-white overflow-hidden rounded-md p-0"
       >
         <div className="flex flex-col w-full h-auto">
