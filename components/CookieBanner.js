@@ -34,7 +34,7 @@ export const CookieBanner = () => {
 
   if (!open) return null;
   return (
-    <div className="w-full bg-gray-100 flex items-center py-20 justify-center relative">
+    <div className="fixed z-50 top-0 left-0 w-full h-screen bg-gray-100 bg-opacity-0 flex items-center py-20 justify-center">
       <section className="w-full p-5 lg:px-24 absolute top-0 bg-gray-600">
         <div className="md:flex items-center -mx-3">
           <div className="md:flex-1 px-3 mb-5 md:mb-0">
@@ -68,9 +68,9 @@ export const CookieBanner = () => {
         ref={modalRef}
         open={settingsOpen}
         id={styles.cookiesModal}
-        className="h-auto w-11/12 md:w-1/2 bg-white overflow-hidden rounded-md p-0"
+        className="h-auto w-11/12 md:w-1/2 bg-white dark:bg-gray-500 overflow-hidden rounded-md p-0"
       >
-        <div className="flex flex-col w-full h-auto">
+        <div className="flex flex-col dark:bg-gray-700 w-full h-auto">
           <div className="flex w-full h-auto items-center px-5 py-3">
             <div className="w-10/12 h-auto text-lg font-bold">
               Cookie settings
@@ -84,15 +84,15 @@ export const CookieBanner = () => {
               </button>
             </div>
           </div>
-          <div className="flex w-full items-center bg-gray-100 border-b border-gray-200 px-5 py-3 text-sm">
-            <div className="flex-1 z-20">
+          <div className="flex w-full items-center bg-gray-100 dark:bg-gray-900 border-b border-gray-200 px-5 py-3 text-sm">
+            <div className="flex-1">
               <p>Strictly necessary cookies</p>
             </div>
             <div className="w-10 text-right">
               <i className="mdi mdi-check-circle text-2xl text-green-400 leading-none"></i>
             </div>
           </div>
-          <div className="flex w-full items-center bg-gray-100 border-b border-gray-200 px-5 py-3 text-sm">
+          <div className="flex w-full items-center bg-gray-100 dark:bg-gray-900 border-b border-gray-200 px-5 py-3 text-sm">
             <div className="flex-1">
               <p>Cookies that remember your settings</p>
             </div>
@@ -100,7 +100,7 @@ export const CookieBanner = () => {
               <i className="mdi mdi-check-circle text-2xl text-green-400 leading-none"></i>
             </div>
           </div>
-          <div className="flex w-full items-center bg-gray-100 border-b border-gray-200 px-5 py-3 text-sm">
+          <div className="flex w-full items-center bg-gray-100 dark:bg-gray-900 border-b border-gray-200 px-5 py-3 text-sm">
             <div className="flex-1">
               <p>Cookies that measure website use</p>
             </div>
@@ -108,7 +108,7 @@ export const CookieBanner = () => {
               <i className="mdi mdi-check-circle text-2xl text-green-400 leading-none"></i>
             </div>
           </div>
-          <div className="flex w-full items-center bg-gray-100 border-b border-gray-200 px-5 py-3 text-sm">
+          <div className="flex w-full items-center bg-gray-100 dark:bg-gray-900 border-b border-gray-200 px-5 py-3 text-sm">
             <div className="flex-1">
               <p>Cookies that help with our communications and marketing</p>
             </div>
