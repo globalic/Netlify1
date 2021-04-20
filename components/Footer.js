@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-gray-300 px-15 lg:px-20 py-12">
+    <footer className="bg-gray-800 text-gray-300 px-4 lg:px-20 py-12">
       <div className="max-w-screen-full mx-auto mb-6 lg:mb-8 flex justify-between">
         <img
           className="h-8"
