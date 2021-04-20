@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
+import { CookieContext } from "../context/CookieContext";
 import styles from "../styles/cookiebanner.module.css";
 
 export const CookieBanner = () => {
@@ -8,18 +9,20 @@ export const CookieBanner = () => {
   // correctly
   const modalRef = useRef();
 
+  const { cookiesOpen, toggleCookiesOpen } = useContext(CookieContext);
+
   // Opening and closing the initial cookies display
-  const [open, setOpen] = useState(true);
 
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   const acceptCookiesHandler = () => {
     // place code accept cookies
-    setOpen(false);
+    toggleCookiesOpen();
   };
   const saveSettingsHandler = () => {
     // place code to save settings
-    setOpen(false);
+    modalRef.current.close();
+    setSettingsOpen(false);
   };
 
   const openSettingsHandler = () => {
@@ -32,7 +35,7 @@ export const CookieBanner = () => {
     setSettingsOpen(false);
   };
 
-  if (!open) return null;
+  if (!cookiesOpen) return null;
   return (
     <div className="fixed z-50 top-0 left-0 w-full h-screen bg-gray-100 bg-opacity-0 flex items-center py-20 justify-center">
       <section className="w-full p-5 lg:px-24 absolute top-0 bg-gray-600">
@@ -118,7 +121,7 @@ export const CookieBanner = () => {
           </div>
           <div className="flex w-full px-5 py-3 justify-end">
             <button
-              onClick={closeSettingsHandler}
+              onClick={saveSettingsHandler}
               className="py-2 px-8 bg-gray-800 hover:bg-gray-900 text-white rounded font-bold text-sm shadow-xl"
             >
               Save settings

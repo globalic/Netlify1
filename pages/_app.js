@@ -1,10 +1,13 @@
 import "tailwindcss/tailwind.css";
 import { ThemeProvider } from "next-themes";
+import { CookieHandler } from "../context/CookieContext";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
-      <Component {...pageProps} />
+      <CookieHandler>
+        <Component {...pageProps} />
+      </CookieHandler>
     </ThemeProvider>
   );
 }

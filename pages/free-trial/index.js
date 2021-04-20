@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Footer } from "../../components/Footer";
 import { Navbar } from "../../components/Navbar";
+import { CookieBanner } from "../../components/CookieBanner";
 
 export default function FreeTrialPage() {
   return (
@@ -9,6 +10,7 @@ export default function FreeTrialPage() {
         <title>My Website | Free Trial</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <CookieBanner />
       <Navbar />
       <Footer />
     </>

@@ -8,7 +8,6 @@ import { ScrollToTop } from "../components/ScrollToTop";
 import { ExampleCTAHeader } from "../components/examples/ExampleCTAHeader";
 import { ExampleFeaturedSection } from "../components/examples/ExampleFeaturedSection";
 import { ExampleFreeTrial } from "../components/examples/ExampleFreeTrial";
-import { createRef, useEffect, useRef } from "react";
 import { CookieBanner } from "../components/CookieBanner";
 
 export default function Home() {
