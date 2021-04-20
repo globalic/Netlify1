@@ -20,7 +20,7 @@ export const ScrollToTop = () => {
       className="flex justify-center items-center text-white cursor-pointer fixed right-10 bottom-10 p-3 rounded-full bg-blue-700"
     >
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="https://www.w3.org/2000/svg"
         className="h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
