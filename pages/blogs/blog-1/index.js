@@ -4,11 +4,18 @@ import { Navbar } from "../../../components/Navbar";
 import { ScrollToTop } from "../../../components/ScrollToTop";
 import { CookieBanner } from "../../../components/CookieBanner";
 
+// This is used so that the NavBar can
+// style a specific link to let the
+// user know which page they're on.
+
+// We're going to pass this into the Navbar
+const currentPage = "blog";
+
 export default function Blog1Page() {
   return (
     <>
       <CookieBanner />
-      <Navbar />
+      <Navbar currentPage={currentPage} />
       <ExampleBlog />
       <ScrollToTop />
       <Footer />

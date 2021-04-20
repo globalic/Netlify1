@@ -10,6 +10,13 @@ import { ExampleFeaturedSection } from "../components/examples/ExampleFeaturedSe
 import { ExampleFreeTrial } from "../components/examples/ExampleFreeTrial";
 import { CookieBanner } from "../components/CookieBanner";
 
+// This is used so that the NavBar can
+// style a specific link to let the
+// user know which page they're on.
+
+// We're going to pass this into the Navbar
+const currentPage = "home";
+
 export default function Home() {
   return (
     <div id="top">
@@ -18,7 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CookieBanner />
-      <Navbar />
+      <Navbar currentPage={currentPage} />
 
       {/* Examples */}
       <ExampleCTAHeader />

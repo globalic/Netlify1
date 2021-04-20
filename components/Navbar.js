@@ -4,9 +4,19 @@ import Image from "next/image";
 import { useState } from "react";
 import { DarkModeToggle } from "../components/DarkModeToggle";
 
-export const Navbar = () => {
+export const Navbar = ({ currentPage }) => {
   const [blogDropdownOpen, setblogDropdownOpen] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const onHome = currentPage === "home" ? true : false;
+  const onAbout = currentPage === "about" ? true : false;
+  const onContact = currentPage === "contact" ? true : false;
+  const onBlog = currentPage === "blog" ? true : false;
+  const onFAQ = currentPage === "faq" ? true : false;
+  const onCookie = currentPage === "cookie" ? true : false;
+  const onFreeTrial = currentPage === "free-trial" ? true : false;
+  const onSignIn = currentPage === "sign-in" ? true : false;
+  const onTerms = currentPage === "terms" ? true : false;
+
   return (
     <nav className="sticky inset-0 z-20 flex items-center justify-between flex-wrap bg-white dark:bg-gray-900 py-4 lg:px-12 shadow border-solid border-t-2 border-blue-700">
       <div className="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
@@ -40,17 +50,29 @@ export const Navbar = () => {
       >
         <div className="text-md font-bold text-blue-700 dark:text-blue-300 lg:flex-grow">
           <Link href="/">
-            <p className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer">
+            <p
+              className={`${
+                onHome ? "underline " : ""
+              }block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
+            >
               Home
             </p>
           </Link>
           <Link href="/about">
-            <p className=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer">
+            <p
+              className={`${
+                onAbout ? "underline " : ""
+              }block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
+            >
               About
             </p>
           </Link>
           <Link href="/contact">
-            <p className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer">
+            <p
+              className={`${
+                onContact ? "underline " : ""
+              }block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
+            >
               <span>Contact</span>
             </p>
           </Link>
