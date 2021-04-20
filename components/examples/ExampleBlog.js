@@ -164,7 +164,7 @@ export const ExampleBlog = () => {
       <div className="flex w-full items-center font-sans px-4 py-12">
         <img
           className="w-10 h-10 rounded-full mr-4"
-          src="http://i.pravatar.cc/300"
+          src="https://i.pravatar.cc/300"
           alt="Avatar of Author"
         />
         <div className="flex-1 px-2">

@@ -2,11 +2,7 @@ export const Footer = () => {
   return (
     <footer className="bg-gray-800 text-gray-300 px-4 lg:px-20 py-12">
       <div className="max-w-screen-full mx-auto mb-6 lg:mb-8 flex justify-between">
-        <img
-          className="h-8"
-          src="./placeholder-white.svg"
-          alt="placeholder for logo"
-        />
+        <img className="h-8" src="/logo.svg" alt="placeholder for logo" />
         <a href="#" className="flex items-center hover:text-gray-100">
           <span>Return to top</span>
           <svg
