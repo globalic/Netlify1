@@ -2,24 +2,7 @@ export const Footer = () => {
   return (
     <footer className="bg-gray-800 text-gray-300 px-4 lg:px-20 py-12">
       <div className="max-w-screen-full mx-auto mb-6 lg:mb-8 flex justify-between">
-        <img className="h-8" src="/logo.svg" alt="placeholder for logo" />
-        <a href="#" className="flex items-center hover:text-gray-100">
-          <span>Return to top</span>
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="https://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M8 7l4-4m0 0l4 4m-4-4v18"
-            ></path>
-          </svg>
-        </a>
+        <img className="h-6" src="/logo.svg" alt="placeholder for logo" />
       </div>
       <div className="max-w-screen-full mx-auto border-t-2 border-gray-700 pt-8 space-y-10">
         <div className="md:grid md:grid-cols-5 space-y-2 md:space-y-0">
