@@ -90,7 +90,7 @@ export const Navbar = () => {
                 <ul className="list-reset">
                   <li className="relative">
                     <Link
-                      href="/blog-1"
+                      href="/blogs/blog-1"
                       className="px-4 py-2 flex w-full items-start hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100 cursor-pointer"
                     >
                       <div className="px-4 py-2 inline flex w-full items-start hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
@@ -99,7 +99,7 @@ export const Navbar = () => {
                     </Link>
                   </li>
                   <li className="relative">
-                    <Link href="/blog-2">
+                    <Link href="/blogs/blog-2">
                       <div className="px-4 py-2 inline flex w-full items-start hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
                         <span className="flex-1">Blog 2</span>
                       </div>
@@ -107,7 +107,7 @@ export const Navbar = () => {
                   </li>
                   <li className="relative">
                     <Link
-                      href="/blog-3"
+                      href="/blogs/blog-3"
                       className="px-4 py-2 flex w-full items-start hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100 cursor-pointer"
                     >
                       <div className="px-4 py-2 inline flex w-full items-start hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
