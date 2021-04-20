@@ -37,7 +37,7 @@ export const CookieBanner = () => {
 
   if (!cookiesOpen) return null;
   return (
-    <div className="fixed z-50 top-0 left-0 w-full h-screen bg-gray-100 bg-opacity-0 flex items-center py-20 justify-center">
+    <div className="fixed z-50 bottom-0 left-0 w-full bg-gray-100 bg-opacity-0 flex items-center pt-20 justify-center">
       <section className="w-full p-5 lg:px-24 absolute top-0 bg-gray-600">
         <div className="md:flex items-center -mx-3">
           <div className="md:flex-1 px-3 mb-5 md:mb-0">
