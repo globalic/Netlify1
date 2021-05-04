@@ -53,10 +53,11 @@ export const DarkModeToggle = () => {
     //   </div>
     // </button>
     <p
-      className="flex text-md px-4 w-12 h-12 ml-2 py-2 rounded bg-blue-700 font-bold mt-4 hover:bg-blue-800 lg:mt-0 md:bg-transparent md:hover:bg-transparent cursor-pointer transition duration-300 outline-none"
+      className="flex justify-center items-center text-md px-4 w-full h-12 ml-2 py-2 rounded bg-blue-700 font-bold mt-4 hover:bg-blue-800 lg:mt-0 md:bg-transparent md:hover:bg-transparent cursor-pointer transition duration-300"
+      aria-label="dark mode toggle"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
-      {currentIcon}
+      <div className="w-8 h-8">{currentIcon}</div>
     </p>
   );
 };
