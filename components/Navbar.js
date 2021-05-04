@@ -50,27 +50,21 @@ export const Navbar = ({ currentPage }) => {
         <div className="text-md font-bold text-blue-700 dark:text-blue-300 lg:flex-grow">
           <Link href="/">
             <p
-              className={`${
-                onHome ? "underline " : ""
-              }block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
+              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
             >
               Home
             </p>
           </Link>
           <Link href="/about">
             <p
-              className={`${
-                onAbout ? "underline " : ""
-              }block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
+              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
             >
               About
             </p>
           </Link>
           <Link href="/contact">
             <p
-              className={`${
-                onContact ? "underline " : ""
-              }block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
+              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
             >
               <span>Contact</span>
             </p>
@@ -141,14 +135,17 @@ export const Navbar = ({ currentPage }) => {
             </div>
           </div>
         </div>
-        <div className="relative mx-auto text-gray-600 dark:text-gray-300 lg:block hidden">
+        <div className="relative mx-auto mt-4 lg:mt-0 text-gray-600 dark:text-gray-300 block">
           <input
-            className="border-2 mr-10 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
+            className="border-2 mr-10 border-gray-300 dark:bg-gray-90 bg-white h-10 w-full lg:w-auto pl-2 pr-8 rounded-lg text-sm focus:outline-none"
             type="search"
             name="search"
             placeholder="Search"
           />
-          <button type="submit" className="absolute right-0 top-0 mt-3 mr-12">
+          <button
+            type="submit"
+            className="absolute right-0 top-0 mt-3 mr-3 lg:mr-12"
+          >
             <svg
               className="text-gray-600 dark:text-gray-300 h-4 w-4 fill-current"
               xmlns="https://www.w3.org/2000/svg"
@@ -164,7 +161,7 @@ export const Navbar = ({ currentPage }) => {
             </svg>
           </button>
         </div>
-        <div className="ml-4 mr-4">
+        <div className="mt-4 lg:mt-0">
           <DarkModeToggle />
         </div>
         <div className="flex ">
