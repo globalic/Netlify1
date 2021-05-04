@@ -34,30 +34,16 @@ export const DarkModeToggle = () => {
       />
     </svg>
   );
-  const lightClass =
-    "w-12 h-12 relative rounded-full transition duration-500 transform bg-yellow-500 -translate-x-2 p-1 text-white";
-  const darkClass =
-    "w-12 h-12 relative rounded-full transition duration-500 transform bg-gray-700 translate-x-full p-1 text-white";
 
-  const currentClass = theme === "dark" ? lightClass : darkClass;
   const currentIcon = theme === "dark" ? lightIcon : darkIcon;
 
   return (
-    // <button
-    //   aria-label="dark mode toggle"
-    //   className="w-20 h-10 rounded-full bg-white flex items-center transition duration-300 focus:outline-none shadow"
-    //   onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-    // >
-    //   <div aria-label="dark mode toggle" className={currentClass}>
-    //     {currentIcon}
-    //   </div>
-    // </button>
     <p
-      className="flex justify-center items-center text-md px-4 w-full h-12 ml-2 py-2 rounded bg-blue-700 font-bold mt-4 hover:bg-blue-800 lg:mt-0 md:bg-transparent md:hover:bg-transparent cursor-pointer transition duration-300"
+      className="flex justify-center items-center text-md text-white lg:text-current px-4 w-full h-12 py-2 rounded bg-blue-700 font-bold hover:bg-blue-800 lg:mt-0 lg:bg-transparent lg:hover:bg-transparent cursor-pointer"
       aria-label="dark mode toggle"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
-      <div className="w-8 h-8">{currentIcon}</div>
+      <div className="w-5 h-5">{currentIcon}</div>
     </p>
   );
 };
