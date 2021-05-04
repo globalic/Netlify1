@@ -137,7 +137,7 @@ export const Navbar = ({ currentPage }) => {
         </div>
         <div className="relative mx-auto mt-4 lg:mt-0 text-gray-600 dark:text-gray-300 block">
           <input
-            className="border-2 mr-10 border-gray-300 dark:bg-gray-90 bg-white h-10 w-full lg:w-auto pl-2 pr-8 rounded-lg text-sm focus:outline-none"
+            className="border-2 mr-10 border-gray-300 h-10 w-full lg:w-auto pl-2 pr-8 rounded-lg text-sm focus:outline-none"
             type="search"
             name="search"
             placeholder="Search"
