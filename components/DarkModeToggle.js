@@ -43,14 +43,20 @@ export const DarkModeToggle = () => {
   const currentIcon = theme === "dark" ? lightIcon : darkIcon;
 
   return (
-    <button
-      aria-label="dark mode toggle"
-      className="w-20 h-10 rounded-full bg-white flex items-center transition duration-300 focus:outline-none shadow"
+    // <button
+    //   aria-label="dark mode toggle"
+    //   className="w-20 h-10 rounded-full bg-white flex items-center transition duration-300 focus:outline-none shadow"
+    //   onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+    // >
+    //   <div aria-label="dark mode toggle" className={currentClass}>
+    //     {currentIcon}
+    //   </div>
+    // </button>
+    <p
+      className="flex text-md px-4 w-12 h-12 ml-2 py-2 rounded bg-blue-700 font-bold mt-4 hover:bg-blue-800 lg:mt-0 md:bg-transparent md:hover:bg-transparent cursor-pointer transition duration-300 outline-none"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
-      <div aria-label="dark mode toggle" className={currentClass}>
-        {currentIcon}
-      </div>
-    </button>
+      {currentIcon}
+    </p>
   );
 };
