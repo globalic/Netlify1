@@ -9,7 +9,7 @@ export const Navbar = ({ currentPage }) => {
   const onHome = currentPage === "home" ? true : false;
   const onAbout = currentPage === "about" ? true : false;
   const onContact = currentPage === "contact" ? true : false;
-  const onBlog = currentPage.includes("blog") ? true : false;
+  const onBlog = currentPage?.includes("blog") ? true : false;
   const onFAQ = currentPage === "faq" ? true : false;
   const onCookie = currentPage === "cookie" ? true : false;
   const onFreeTrial = currentPage === "free-trial" ? true : false;
