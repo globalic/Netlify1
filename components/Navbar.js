@@ -9,7 +9,7 @@ export const Navbar = ({ currentPage }) => {
   const onHome = currentPage === "home" ? true : false;
   const onAbout = currentPage === "about" ? true : false;
   const onContact = currentPage === "contact" ? true : false;
-  const onBlog = currentPage === "blog" ? true : false;
+  const onBlog = currentPage.includes("blog") ? true : false;
   const onFAQ = currentPage === "faq" ? true : false;
   const onCookie = currentPage === "cookie" ? true : false;
   const onFreeTrial = currentPage === "free-trial" ? true : false;
@@ -47,24 +47,30 @@ export const Navbar = ({ currentPage }) => {
           mobileNavOpen ? "" : "hidden "
         }menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8`}
       >
-        <div className="text-md font-bold text-blue-700 dark:text-blue-300 lg:flex-grow">
+        <div className="text-md font-bold text-gray-700 dark:text-blue-300 lg:flex-grow">
           <Link href="/">
             <p
-              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-3 py-2 rounded hover:bg-blue-700 mr-1 cursor-pointer`}
+              className={`${
+                onHome ? "text-blue-700 " : ""
+              }block mt-4 lg:inline-block lg:mt-0 px-3 py-2 rounded mr-1 hover:text-blue-700 cursor-pointer`}
             >
               Home
             </p>
           </Link>
           <Link href="/about">
             <p
-              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-3 py-2 rounded hover:bg-blue-700 mr-1 cursor-pointer`}
+              className={`${
+                onAbout ? "text-blue-700 " : ""
+              }block mt-4 lg:inline-block lg:mt-0 px-3 py-2 rounded mr-1 hover:text-blue-700 cursor-pointer`}
             >
               About
             </p>
           </Link>
           <Link href="/contact">
             <p
-              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-3 py-2 rounded hover:bg-blue-700 mr-1 cursor-pointer`}
+              className={`${
+                onContact ? "text-blue-700 " : ""
+              }block mt-4 lg:inline-block lg:mt-0 px-3 py-2 rounded mr-1 hover:text-blue-700 cursor-pointer`}
             >
               <span>Contact</span>
             </p>
@@ -73,7 +79,9 @@ export const Navbar = ({ currentPage }) => {
             <a href="#" href="#responsive-header">
               <p
                 onClick={() => setblogDropdownOpen((prev) => !prev)}
-                className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer"
+                className={`${
+                  onBlog ? "text-blue-700 " : ""
+                }block mt-4 lg:inline-block lg:mt-0 px-3 py-2 rounded hover:text-blue-700 cursor-pointer`}
               >
                 <span>Blog</span>
                 <span className="ml-2 font-size inline-block">
