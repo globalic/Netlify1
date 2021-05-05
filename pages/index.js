@@ -7,6 +7,7 @@ import { ScrollToTop } from "../components/ScrollToTop";
 // Example Components
 import { ExampleCTAHeader } from "../components/examples/ExampleCTAHeader";
 import { ExampleFeaturedSection } from "../components/examples/ExampleFeaturedSection";
+import { ExampleGrids } from "../components/examples/ExampleGrids";
 import { ExampleFreeTrial } from "../components/examples/ExampleFreeTrial";
 import { CookieBanner } from "../components/CookieBanner";
 
@@ -31,6 +32,7 @@ export default function Home() {
       <ExampleCTAHeader />
       <ExampleFeaturedSection />
       <ExampleFeaturedSection />
+      <ExampleGrids />
       <ExampleFreeTrial />
 
       <ScrollToTop />
