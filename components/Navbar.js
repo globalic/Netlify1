@@ -17,14 +17,14 @@ export const Navbar = ({ currentPage }) => {
   const onTerms = currentPage === "terms" ? true : false;
 
   return (
-    <nav className="sticky inset-0 z-20 flex items-center justify-between flex-wrap bg-white dark:bg-gray-900 py-4 lg:px-12 shadow border-solid border-t-2 border-blue-700">
-      <div className="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
-        <div className="flex items-center flex-shrink-0 text-gray-800 dark:text-gray-100 mr-16 ">
-          <img src="/logo.svg" height={30} width={200} />
+    <nav className="sticky inset-0 z-20 flex items-center justify-between bg-white dark:bg-gray-900 py-4 lg:px-8 shadow border-solid border-t-2 border-blue-700">
+      <div className="flex justify-between w-full pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0 lg:w-auto lg:border-b-0">
+        <div className="pl-6 lg:pl-0 flex items-center flex-shrink-0 text-gray-800 dark:text-gray-100">
+          <img src="/logo.svg" height={30} width={150} />
         </div>
         <div
           onClick={() => setMobileNavOpen((prev) => !prev)}
-          className="block lg:hidden "
+          className="block lg:hidden"
         >
           <button
             id="nav"
@@ -50,21 +50,21 @@ export const Navbar = ({ currentPage }) => {
         <div className="text-md font-bold text-blue-700 dark:text-blue-300 lg:flex-grow">
           <Link href="/">
             <p
-              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
+              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-3 py-2 rounded hover:bg-blue-700 mr-1 cursor-pointer`}
             >
               Home
             </p>
           </Link>
           <Link href="/about">
             <p
-              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
+              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-3 py-2 rounded hover:bg-blue-700 mr-1 cursor-pointer`}
             >
               About
             </p>
           </Link>
           <Link href="/contact">
             <p
-              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer`}
+              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white px-3 py-2 rounded hover:bg-blue-700 mr-1 cursor-pointer`}
             >
               <span>Contact</span>
             </p>
@@ -73,7 +73,7 @@ export const Navbar = ({ currentPage }) => {
             <a href="#" href="#responsive-header">
               <p
                 onClick={() => setblogDropdownOpen((prev) => !prev)}
-                className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2 cursor-pointer"
+                className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-3 py-2 rounded hover:bg-blue-700 cursor-pointer"
               >
                 <span>Blog</span>
                 <span className="ml-2 font-size inline-block">
@@ -135,16 +135,19 @@ export const Navbar = ({ currentPage }) => {
             </div>
           </div>
         </div>
+        <div className="mt-4 lg:mt-0">
+          <DarkModeToggle />
+        </div>
         <div className="relative mx-auto mt-4 lg:mt-0 text-gray-600 dark:text-gray-300 block">
           <input
-            className="border-2 mr-10 border-gray-300 h-10 w-full lg:w-auto pl-2 pr-8 rounded-lg text-sm focus:outline-none"
+            className="border-2 mr-6 border-gray-300 h-10 w-full lg:w-auto pl-2 pr-8 rounded-lg text-sm focus:outline-none"
             type="search"
             name="search"
             placeholder="Search"
           />
           <button
             type="submit"
-            className="absolute right-0 top-0 mt-3 mr-3 lg:mr-12"
+            className="absolute right-0 top-0 mt-3 mr-3 lg:mr-8"
           >
             <svg
               className="text-gray-600 dark:text-gray-300 h-4 w-4 fill-current"
@@ -161,19 +164,16 @@ export const Navbar = ({ currentPage }) => {
             </svg>
           </button>
         </div>
-        <div className="mt-4 lg:mt-0">
-          <DarkModeToggle />
-        </div>
-        <div className="flex ">
+        <div className="text-center lg:flex">
           <Link href="/sign-in">
-            <p className="block text-md px-4 py-2 rounded text-blue-700 dark:text-blue-400 ml-2 font-bold hover:text-white dark:hover:text-white mt-4 hover:bg-blue-700 lg:mt-0 cursor-pointer">
+            <p className="block text-md px-4 py-3 rounded text-blue-700 dark:text-blue-400 font-bold hover:text-white dark:hover:text-white mt-4 hover:bg-blue-700 lg:mt-0 cursor-pointer">
               Sign in
             </p>
           </Link>
 
           <Link href="/free-trial">
-            <p className=" block text-md px-4  ml-2 py-2 rounded text-white dark:text-white bg-blue-700 font-bold mt-4 hover:bg-blue-800 lg:mt-0 cursor-pointer">
-              Start Free Trial
+            <p className=" block text-md px-4 py-3 rounded text-white dark:text-white bg-blue-700 font-bold mt-4 hover:bg-blue-800 lg:ml-2 lg:mt-0 cursor-pointer">
+              <span className="lg:hidden xl:inline">Start </span>Free Trial
             </p>
           </Link>
         </div>

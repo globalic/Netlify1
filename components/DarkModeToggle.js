@@ -39,7 +39,7 @@ export const DarkModeToggle = () => {
 
   return (
     <p
-      className="flex justify-center items-center text-md text-white lg:text-current px-4 w-full h-12 py-2 rounded bg-blue-700 font-bold hover:bg-blue-800 lg:mt-0 lg:bg-transparent lg:hover:bg-transparent cursor-pointer"
+      className="flex justify-center items-center text-md text-white lg:text-current px-3 w-full h-12 py-2 rounded bg-blue-700 font-bold hover:bg-blue-800 lg:mt-0 lg:bg-transparent lg:hover:bg-transparent cursor-pointer"
       aria-label="dark mode toggle"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
