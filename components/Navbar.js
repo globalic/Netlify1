@@ -48,8 +48,8 @@ export const Navbar = ({ currentPage }) => {
   const onTerms = currentPage === "terms" ? true : false;
 
   return (
-    <nav className="sticky inset-0 z-20 bg-white dark:bg-gray-900 py-4 lg:px-8 shadow border-solid border-t-2 border-blue-700">
-      <div className="w-full lg:flex items-center justify-between">
+    <nav className="sticky inset-0 z-20 bg-white dark:bg-gray-900 py-4 shadow border-solid border-t-2 border-blue-700">
+      <div className="w-full lg:container lg:mx-auto lg:flex lg:px-8 items-center justify-between">
         <div className="container mx-auto flex justify-between w-full px-8 pb-5 lg:pb-0 lg:px-0 lg:w-auto">
           <div className="pl-1 lg:pl-0 flex items-center flex-shrink-0 text-gray-800 dark:text-gray-100">
             <img src="/logo.svg" height={30} width={150} />
@@ -81,7 +81,7 @@ export const Navbar = ({ currentPage }) => {
         <div
           className={`${
             mobileNavOpen ? "" : "hidden "
-          }menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8`}
+          }menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:pl-3 lg:pr-0 px-8`}
         >
           <div className="text-md font-bold text-gray-700 dark:text-blue-300 lg:flex-grow">
             <Link href="/">
