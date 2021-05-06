@@ -7,14 +7,14 @@ const SearchBox = () => {
   return (
     <div className="relative mx-auto mt-4 lg:mt-0 text-gray-600 dark:text-gray-300 block">
       <input
-        className="border-2 mr-6 border-gray-300 h-10 w-full lg:w-auto pl-2 pr-8 rounded-lg text-sm focus:outline-none"
+        className="border-2 mr-4 border-gray-300 h-10 w-full lg:w-auto pl-2 pr-8 rounded-lg text-sm focus:outline-none"
         type="search"
         name="search"
         placeholder="Search"
       />
       <button
         type="submit"
-        className="absolute right-0 top-0 mt-3 mr-3 lg:mr-8"
+        className="absolute right-0 top-0 mt-3 mr-3 lg:mr-6"
       >
         <svg
           className="text-gray-600 dark:text-gray-300 h-4 w-4 fill-current"
@@ -178,7 +178,7 @@ export const Navbar = ({ currentPage }) => {
             </div>
           </div>
         </div>
-        <div className="mt-4 lg:mt-0">
+        <div className="mt-4 lg:mt-0 lg:mr-3">
           <DarkModeToggle />
         </div>
         <div className="hidden lg:block">
